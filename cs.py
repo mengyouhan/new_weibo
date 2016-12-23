@@ -1,3 +1,5 @@
+
+
 old = '0.1'
 print(old)
 def diff(new):
@@ -7,3 +9,8 @@ def diff(new):
     else:
         old = new
         print('gengxin old:{}'.format(old))
+
+# mailHtmlOwn = """
+# a
+# """
+# print(mailHtmlOwn)

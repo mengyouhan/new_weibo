@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests,json
+from comment import Comm
 import os
 
 
@@ -14,7 +15,7 @@ NewWeiBo_itemid = NewWeiBo['itemid']
 NewWeiBo_scheme = NewWeiBo['scheme']
 NewWeiBo_mblog = NewWeiBo['mblog']
 old = '0.1'
-
+class
 
 def diff(new):
     global old
@@ -22,7 +23,19 @@ def diff(new):
         # 不继续下面操作
         print('meiyou old:{}'.format(old))
     else:
-        # 继续下面操作，评价，并给自己发送邮件
+        # 继续下面操作，
+        # 把NewWeiBo_scheme传到另外一个py文件，再评价，
+        NewUrl()
+        # 并给自己发送邮件
+        if NewWeiBo_mblog_retweeted:
+            # 转发的
+            #  把mailHtml_retweeted传到另外一个py文件，发送邮件
+            mailHtmlRetweeted()
+        else:
+            # 自己的
+            #  把mailHtml_own传到另外一个py文件，发送邮件
+            mailHtmlOwn()
+
         old = new
         print('gengxin old:{}'.format(old))
 
